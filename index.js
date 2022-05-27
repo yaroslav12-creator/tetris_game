@@ -165,7 +165,6 @@ startBtn.addEventListener('click', () => {
                 }
                 if(this.y + i < 0) {
                     title.classList.add("active");
-                    // alert("game over");
                     gameOver = true;
                     break;
                 }
