@@ -9,6 +9,7 @@ body {
 }
 
 .container {
+    position: relative;
     max-width: 200px;
     margin:  15vh auto; 
 }
@@ -43,12 +44,27 @@ body {
 
 .score_section {
     margin-top: 10px;
-    color: #e0e0e0;
+    color: #e1fddc;
     display: flex;
     justify-self: center;
+}
+
+.game-over-title {
+    color: #0e0e0e;
+    font-size: 36px;
+    font-weight: 700;
+    position: absolute;
+    top: 200px;
+    left: 18px;
+    display: none;
+}
+
+.active {
+    display: inline;    
 }
 
 #score {
     margin-left: 5px;
     font-weight: 700;
 }
+

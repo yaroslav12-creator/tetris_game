@@ -3,6 +3,7 @@ const ctx = cvs.getContext("2d");
 const scoreElement = document.getElementById("score");
 const startBtn = document.getElementById("start");
 const restoreBtn = document.getElementById("restore");
+const title = document.getElementById("title");
 
 const ROW = 20;
 const COL = 10;
@@ -37,13 +38,13 @@ startBtn.addEventListener('click', () => {
     startBtn.setAttribute('disabled', true);
     
     const pieces = [
-        [Z, 'green'],
-        [S, 'red'],
-        [T, 'yellow'],
-        [O, 'blue'],
-        [L, 'purple'],
-        [I, 'cyan'],
-        [J, 'orange'],
+        [Z, '#ede115'],
+        [S, '#2fd420'],
+        [T, '#20d4ce'],
+        [O, '#2062d4'],
+        [L, '#5c20d4'],
+        [I, '#aa20d4'],
+        [J, '#d4203b'],
     ];
     
     function generateRandomPiecePattern() {
@@ -163,8 +164,8 @@ startBtn.addEventListener('click', () => {
                    continue;
                 }
                 if(this.y + i < 0) {
-                    
-                    alert("game over");
+                    title.classList.add("active");
+                    // alert("game over");
                     gameOver = true;
                     break;
                 }
